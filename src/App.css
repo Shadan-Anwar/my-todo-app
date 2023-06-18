@@ -1,0 +1,139 @@
+
+.MainCont
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    min-height: 30rem;
+    margin-top: 2rem;
+    background-color: teal;
+    border-radius: 5px;
+    box-shadow: 2px 1.5px 25px black;
+
+}
+
+
+
+.App
+{
+    text-align: center; 
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+.TodoCont
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* min-width: 25rem; */
+
+}
+
+.TodoCont>button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+}
+
+input{
+    border: 2px solid lightgray;
+    border-radius : 10px;
+    width: 13.4rem;
+    height: 2.5rem;
+    
+}
+
+
+
+.MainList
+{
+    /* border: '2px solid black';
+    border-radius: 5px;
+    border-color: aqua;
+    padding: 10px 40px;
+    list-style: none;
+    margin: 10px; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border: 2px solid lightgray;
+    min-width: 15rem;
+    min-height: 2.5rem;
+    border-radius : 10px;
+    padding: 5px 10px;
+    list-style : none;
+    margin: 1rem;
+}
+
+.AddButton
+{
+    
+    background-color: bisque;
+    width: 3.5rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: row; 
+}
+
+.ListButton
+{
+    display: flex;
+    gap: 5px;
+}
+    
+ 
+
+
+
+
+  
+
+  /* .container {
+    background-color: teal;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 600px; 
+     margin: 0 auto; 
+  }
+  
+ 
+   
+  
+  .todo-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .todo-icons {
+    display: flex;
+    gap: 5px;
+  } 
+  
+   */
+  
+  
