@@ -2,6 +2,7 @@
 import './App.css';
 import {useState} from 'react'
 import List from './components/List';
+import Head from './components/Head';
 import { FaTrash, FaCheck, FaEdit } from 'react-icons/fa';
 
 function App() {
@@ -53,12 +54,13 @@ function App() {
     <div className="App">
 
          <div className='MainCont'>
-
-         <h1>Todo Apps </h1>
-           <div className='TodoCont'>
-             <input type='input' value={inputText} onChange={(e)=>setInput(e.target.value)} />
-             <button className='AddButton' onClick={AddNotes}>{editText===-1 ? 'Add' : 'Upd'}</button>
-           </div>
+            <div className='head'>
+              <Head/>
+            </div>
+            <div className='TodoCont'>
+              <input type='input' value={inputText} placeholder='Enter a Todo...' onChange={(e)=>setInput(e.target.value)} />
+              <button className='AddButton' onClick={AddNotes}>{editText===-1 ? 'Add' : 'Upd'}</button>
+            </div>
            {
             node.map((element,index)=>(
                   <div className='MainList'>
@@ -82,79 +84,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-// import './App.css';
-// import { useState } from 'react';
-// import { FaTrash, FaCheck, FaEdit } from 'react-icons/fa';
-
-// function App() {
-//   const [text, setText] = useState([]);
-//   const [inputText, setInput] = useState('');
-//   const [editIndex, setEditIndex] = useState(-1);
-
-//   function addNotes() {
-//     if (editIndex === -1) {
-//       setText((prevText) => [...prevText, { text: inputText, completed: false }]);
-//     } else {
-//       setText((prevText) =>
-//         prevText.map((item, index) =>
-//           index === editIndex ? { ...item, text: inputText } : item
-//         )
-//       );
-//       setEditIndex(-1);
-//     }
-//     setInput('');
-//   }
-
-//   function deleteNote(index) {
-//     setText((prevText) => prevText.filter((_, i) => i !== index));
-//   }
-
-//   function toggleComplete(index) {
-//     setText((prevText) =>
-//       prevText.map((item, i) =>
-//         i === index ? { ...item, completed: !item.completed } : item
-//       )
-//     );
-//   }
-
-//   function editNote(index) {
-//     setEditIndex(index);
-//     setInput(text[index].text);
-//   }
-
-//   return (
-//     <div className="App">
-     
-//       <div className="container">
-//        <h1>Todo App</h1>
-//         <div className="todo-list-container">
-//           <div className="todo-list">
-//             <input type="input" value={inputText} onChange={(e) => setInput(e.target.value)} />
-//             <button onClick={addNotes}>{editIndex === -1 ? 'Add' : 'Update'}</button>
-//           </div>
-//           {text.map((item, index) => (
-//             <div className="todo-item" key={index}>
-//               <h3 style={{ textDecoration: item.completed ? 'line-through' : 'none' }}>
-//                 {item.text}
-//               </h3>
-//               <div className="todo-icons">
-//                 <FaTrash onClick={() => deleteNote(index)} />
-//                 <FaCheck onClick={() => toggleComplete(index)} />
-//                 <FaEdit onClick={() => editNote(index)} />
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 
 
